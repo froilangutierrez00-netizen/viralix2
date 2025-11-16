@@ -1,0 +1,315 @@
+:root {
+  --azul: #00aaff;
+  --negro: #050505;
+  --gris: #121212;
+  --blanco: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--negro);
+  color: var(--blanco);
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--gris);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--azul);
+}
+
+header img {
+  height: 55px;
+  transition: transform 0.3s ease;
+}
+header img:hover {
+  transform: scale(1.05);
+}
+
+header h1 {
+  color: var(--azul);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #00101f, #000);
+}
+
+.hero h2 {
+  color: var(--azul);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero p {
+  color: #ccc;
+  font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.combos {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.combo {
+  background-color: var(--gris);
+  margin-bottom: 1.5rem;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.combo:hover {
+  border-color: var(--azul);
+  box-shadow: 0 0 10px rgba(0, 170, 255, 0.3);
+}
+
+.combo-title {
+  padding: 1.2rem;
+  font-size: 1.5rem;
+  color: var(--azul);
+  background: #0d0d0d;
+  cursor: pointer;
+  transition: background 0.3s;
+  text-align: center;
+}
+
+.combo-title:hover {
+  background: rgba(0,170,255,0.1);
+}
+
+.combo-content {
+  display: none;
+  padding: 1rem 2rem;
+  animation: fadeIn 0.5s ease;
+}
+
+.combo-content ul {
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.combo-content li {
+  margin: 0.6rem 0;
+  color: #ccc;
+}
+
+/* === Recomendaciones === */
+.recomendaciones {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #0d0d0d;
+}
+
+.recomendaciones h3 {
+  color: var(--azul);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.recomendaciones p {
+  color: #ccc;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* === NUEVA SECCIÓN === */
+.restaurante {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: #0a0a0a;
+  border-top: 1px solid var(--azul);
+}
+
+.restaurante h3 {
+  color: var(--azul);
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.menu-botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.menu-botones button {
+  background: transparent;
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-botones button:hover {
+  background: var(--azul);
+  color: var(--negro);
+}
+
+.colaboradores-titulo {
+  margin-top: 2rem;
+  color: var(--azul);
+  font-size: 1.6rem;
+}
+
+.colaboradores {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.colab {
+  width: 65px;
+  height: 65px;
+  background: var(--gris);
+  border: 1px solid var(--azul);
+  color: var(--azul);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+}
+
+.colab:hover {
+  transform: scale(1.1);
+  background: var(--azul);
+  color: var(--negro);
+}
+
+.registro {
+  margin-top: 3rem;
+}
+
+.registro h3 {
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.registro form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.registro input {
+  width: 280px;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  border: 1px solid var(--azul);
+  background: transparent;
+  color: var(--blanco);
+  outline: none;
+}
+
+.registro button {
+  background: var(--azul);
+  color: var(--negro);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.registro button:hover {
+  background: var(--blanco);
+  color: var(--negro);
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 1px solid var(--azul);
+  background-color: var(--gris);
+}
+
+.app-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.app-logos img {
+  height: 45px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.app-logos img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+footer p {
+  margin-top: 1rem;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+  .combo-title {
+    font-size: 1.2rem;
+  }
+  .app-logos img {
+    height: 35px;
+  }
+  .menu-botones {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .colaboradores {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+.colab img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(67%) sepia(89%) saturate(4012%) hue-rotate(177deg) brightness(104%) contrast(103%);
+  transition: transform 0.3s ease;
+}
+
+.colab:hover img {
+  transform: scale(1.1);
+  filter: none;
+}
