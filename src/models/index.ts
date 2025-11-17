@@ -4,6 +4,7 @@ export type Combo = {
   price: string;
   priceId?: string;
   featureIndices: number[];
+  badge?: string | null;
 };
 
 export type CombosConfig = {

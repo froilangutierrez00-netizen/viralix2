@@ -50,6 +50,10 @@ export default function ComboCard({ combo }: Props) {
     <div className={styles.root}>
       <div className={styles.ribbon}></div>
       
+      {combo.badge && (
+        <div className={styles.badge}>{combo.badge}</div>
+      )}
+      
       <div className={styles.header}>
         <h3 className={styles.title}>{combo.title}</h3>
         <div className={styles.price}>{combo.price}</div>
@@ -74,7 +78,7 @@ export default function ComboCard({ combo }: Props) {
           disabled={loading}
           className={`${styles.buyBtn} ${loading ? styles.disabled : ''}`}
         >
-          {loading ? 'Procesando...' : (ff_subscriptionpaymentenabledValue.value ? 'Comprar' : 'Contactar')}
+          {loading ? 'Procesando...' : 'Quiero este plan' }
         </button>
       </div>
     </div>
