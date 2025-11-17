@@ -3,7 +3,7 @@ export type Combo = {
   title: string;
   price: string;
   priceId?: string;
-  featureIndices: number[];
+  keyFeatures: number[];
   badge?: string | null;
 };
 

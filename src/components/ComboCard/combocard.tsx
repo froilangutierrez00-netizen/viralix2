@@ -62,7 +62,7 @@ export default function ComboCard({ combo }: Props) {
 
       <ul className={styles.features}>
         {combosConfig.allFeatures.map((feature, i) => {
-          const isIncluded = combo.featureIndices.includes(i);
+          const isIncluded = combo.keyFeatures.includes(i);
           return (
             <li key={i} className={`${styles.featureItem} ${!isIncluded ? styles.disabled : ''}`}>
               <span className={styles.icon}>{isIncluded ? '✓' : '✕'}</span>
