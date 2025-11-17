@@ -12,23 +12,23 @@
     {
       "id": "basic",
       "title": "Basic",
-      "price": "$200",
+      "price": "$200.000",
       "keyFeatures": [0, 1, 2],
-      "priceId": "price_1"
+      "priceId": "price_1-stripe"
     },
     {
       "id": "standard",
       "title": "Standard",
-      "price": "$300",
+      "price": "$300.000",
       "keyFeatures": [0, 1, 2, 3, 4],
-      "priceId": "price_2"
+      "priceId": "price_2-stripe"
     },
     {
       "id": "premium",
       "title": "Premium",
       "price": "$1.700.000",
       "keyFeatures": [0, 1, 2, 3, 4, 5, 6],
-      "priceId": "price_3"
+      "priceId": "price_3-stripe"
     }
   ]
 }

@@ -5,9 +5,9 @@ export default function Header() {
 
   const notify = useNotification();
 
-  async function redirectToCheckout() {
-    // crear una funcion que cree una sesión de pago y luego redirigir a stripe
-    notify('Redirigiendo al checkout...');
+  async function redirectToOAutht() {
+    // crear una funcion que invoque OAuth 2.0 y luego redirigir a Home
+    notify('Redirigiendo al proveedor de credenciales...');
   }
 
   return (
@@ -17,7 +17,7 @@ export default function Header() {
       </div>
       <nav>
         <a href="/" style={{marginRight:12}}>Inicio</a>
-        <button onClick={redirectToCheckout} style={{background:'var(--azul)',color:'white',padding:'8px 12px',borderRadius:8,border:'none',cursor:'pointer'}}>
+        <button onClick={redirectToOAutht} style={{background:'var(--azul)',color:'white',padding:'8px 12px',borderRadius:8,border:'none',cursor:'pointer'}}>
           {'Iniciar Sesión'}
         </button>
       </nav>
