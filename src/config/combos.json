@@ -1,0 +1,34 @@
+{
+  "allFeatures": [
+    "Seguimiento diario",
+    "Promos del día",
+    "Asesoría mensual",
+    "Estrategia digital",
+    "Campañas Ads",
+    "Producción audiovisual",
+    "CRM y automatización de facturas"
+  ],
+  "combos": [
+    {
+      "id": "basic",
+      "title": "Basic",
+      "price": "$200",
+      "keyFeatures": [0, 1, 2],
+      "priceId": "price_1"
+    },
+    {
+      "id": "standard",
+      "title": "Standard",
+      "price": "$300",
+      "keyFeatures": [0, 1, 2, 3, 4],
+      "priceId": "price_2"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "price": "$1.700.000",
+      "keyFeatures": [0, 1, 2, 3, 4, 5, 6],
+      "priceId": "price_3"
+    }
+  ]
+}

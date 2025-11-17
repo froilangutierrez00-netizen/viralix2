@@ -1,0 +1,25 @@
+.hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.title {
+  color: var(--blanco);
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.subtitle {
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+.combosContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
