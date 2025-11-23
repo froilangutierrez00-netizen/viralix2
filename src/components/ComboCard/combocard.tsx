@@ -57,7 +57,8 @@ export default function ComboCard({ combo }: Props) {
       <div className={styles.header}>
         <h3 className={styles.title}>{combo.title}</h3>
         <div className={styles.price}>{combo.price}</div>
-        <div className={styles.priceLabel}>/ Por mes</div>
+        <div className={styles.priceLabel}>
+          {combo.additionalFee ? `Inicial, Luego ${combo.additionalFee} por mes` : '/ Por mes'}</div>
       </div>
 
       <ul className={styles.features}>

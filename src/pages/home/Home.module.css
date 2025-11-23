@@ -57,3 +57,50 @@
   background-color: var(--azul);
   margin: 0.5rem auto 0;
 }
+
+/* Scroll animations */
+.scrollReveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scrollReveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.scrollRevealFast {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scrollRevealFast.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger effect for combo cards */
+.combosContainer>* {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.combosContainer.visible>*:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.combosContainer.visible>*:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.combosContainer.visible>*:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.combosContainer.visible>* {
+  opacity: 1;
+  transform: translateY(0);
+}

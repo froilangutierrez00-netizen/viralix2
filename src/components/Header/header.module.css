@@ -27,6 +27,7 @@
   font-weight: 700;
   font-size: 1.55rem;
   letter-spacing: -0.025em;
+  text-decoration: none;
 }
 
 .nav {
@@ -52,7 +53,7 @@
   color: white;
 }
 
-.searchButton {
+.authButton {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -66,7 +67,7 @@
   cursor: pointer;
 }
 
-.searchButton:hover {
+.authButton:hover {
   border-color: #3f3f46;
 }
 

@@ -13,7 +13,7 @@ export function useFetch<T>(fn: () => Promise<T>, deps: any[] = []) {
       .catch(e => mounted && setError(e))
       .finally(() => mounted && setLoading(false));
     return () => { mounted = false; };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, deps);
 
   return { data, loading, error };

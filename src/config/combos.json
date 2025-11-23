@@ -6,14 +6,19 @@
     "Estrategia digital",
     "Campañas Ads",
     "Producción audiovisual",
-    "CRM y automatización de facturas"
+    "Menu digital",
+    "Automatización de pedidos en línea"
   ],
   "combos": [
     {
       "id": "basic",
       "title": "Basic",
       "price": "$200.000",
-      "keyFeatures": [0, 1, 2],
+      "keyFeatures": [
+        0,
+        1,
+        2
+      ],
       "priceId": "price_1-stripe",
       "badge": null
     },
@@ -21,7 +26,13 @@
       "id": "standard",
       "title": "Standard",
       "price": "$300.000",
-      "keyFeatures": [0, 1, 2, 3, 4],
+      "keyFeatures": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
       "priceId": "price_2-stripe",
       "badge": "MÁS VENDIDO"
     },
@@ -29,7 +40,17 @@
       "id": "premium",
       "title": "Premium",
       "price": "$1.700.000",
-      "keyFeatures": [0, 1, 2, 3, 4, 5, 6],
+      "additionalFee": "$300.000",
+      "keyFeatures": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
       "priceId": "price_3-stripe",
       "badge": null
     }

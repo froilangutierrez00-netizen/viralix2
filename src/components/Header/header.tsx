@@ -1,8 +1,8 @@
 import { useNotification } from '../Notification/notification';
 import { LogIn, User, LogOut } from 'lucide-react';
-import styles from './header.module.css';
 import { useAuth } from '../../contexts/AuthContext';
 import { useState, useRef, useEffect } from 'react';
+import styles from './header.module.css';
 
 export default function Header() {
   const notify = useNotification();
@@ -11,49 +11,45 @@ export default function Header() {
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
+    if (!dropdownOpen) return;
+
+    const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setDropdownOpen(false);
       }
-    }
+    };
 
-    if (dropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      return () => document.removeEventListener('mousedown', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, [dropdownOpen]);
 
-  async function handleLoginClick() {
+  const handleLogin = async () => {
     await login();
     notify('¡Bienvenido!');
-  }
+  };
 
-  function handleLogout() {
+  const handleLogout = () => {
     logout();
     setDropdownOpen(false);
     notify('Sesión cerrada exitosamente');
-  }
-
-  function toggleDropdown() {
-    setDropdownOpen(!dropdownOpen);
-  }
+  };
 
   return (
     <header className={styles.header}>
       <div className={styles.logoContainer}>
-        <span className={styles.brandText}>Viralix</span>
+        <a href="/" className={styles.brandText}>Viralix</a>
       </div>
 
       <nav className={styles.nav}>
-        <a href="#" className={styles.navLink}>Nosotros</a>
-        <a href="#" className={styles.navLink}>Contacto</a>
+        <a href="/about" className={styles.navLink}>Nosotros</a>
+        <a href="/contact" className={styles.navLink}>Contacto</a>
       </nav>
 
       {user ? (
         <div className={styles.userMenuContainer} ref={dropdownRef}>
           <button
-            onClick={toggleDropdown}
-            className={styles.searchButton}
+            onClick={() => setDropdownOpen(!dropdownOpen)}
+            className={styles.authButton}
           >
             <User size={14} />
             <span>{user.name}</span>
@@ -68,11 +64,8 @@ export default function Header() {
                   <span className={styles.dropdownUserEmail}>{user.email}</span>
                 </div>
               </div>
-              <div className={styles.dropdownDivider}></div>
-              <button
-                onClick={handleLogout}
-                className={styles.dropdownButton}
-              >
+              <div className={styles.dropdownDivider} />
+              <button onClick={handleLogout} className={styles.dropdownButton}>
                 <LogOut size={16} />
                 <span>Cerrar Sesión</span>
               </button>
@@ -80,10 +73,7 @@ export default function Header() {
           )}
         </div>
       ) : (
-        <button
-          onClick={handleLoginClick}
-          className={styles.searchButton}
-        >
+        <button onClick={handleLogin} className={styles.authButton}>
           <LogIn size={14} />
           <span>Iniciar Sesión</span>
         </button>
