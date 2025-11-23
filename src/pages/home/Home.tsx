@@ -2,6 +2,7 @@ import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
 import ComboCard from '../../components/ComboCard/combocard';
+import Testimonials from '../../components/Testimonials/Testimonials';
 import styles from './Home.module.css';
 import combosConfig from '../../config/combos.json';
 
@@ -11,7 +12,7 @@ const combos = combosConfig.combos.map(combo => ({
   features: combo.keyFeatures.map(i => combosConfig.allFeatures[i])
 }));
 
-export default function Home(){
+export default function Home() {
   const particlesInit = async (engine: Engine) => {
     await loadSlim(engine);
   };
@@ -39,9 +40,16 @@ export default function Home(){
         <p className={styles.subtitle}>Marketing digital y asesoría comercial especializada en el sector gastronómico.</p>
       </section>
 
+      <div className={styles.plansHeader}>
+        <span className={styles.plansSubtitle}>PLANES</span>
+        <h2 className={styles.plansTitle}>Nuestros Planes</h2>
+      </div>
+
       <section className={styles.combosContainer}>
         {combos.map(c => <ComboCard key={c.id} combo={c} />)}
       </section>
+
+      <Testimonials />
     </main>
   );
 }

@@ -1,18 +1,138 @@
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 4rem;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
-.logo {
-  height: 48px;
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
-.title {
-  color: var(--azul);
-  margin: 0;
-  font-size: 18px;
+
+.brandText {
+  color: white;
+  font-weight: 700;
+  font-size: 1.55rem;
+  letter-spacing: -0.025em;
 }
-nav a {
-  margin-left: 12px;
-  color: inherit;
+
+.nav {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
+.navLink {
+  font-size: 0.875rem;
+  color: #9ca3af;
+  transition: color 0.15s;
   text-decoration: none;
+}
+
+.navLink:hover {
+  color: white;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #18181b;
+  border: 1px solid #27272a;
+  color: #9ca3af;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  border-color: #3f3f46;
+}
+
+.userMenuContainer {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  background-color: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 0.5rem;
+  min-width: 250px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  color: #e4e4e7;
+}
+
+.dropdownUserInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.dropdownUserName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: white;
+}
+
+.dropdownUserEmail {
+  font-size: 0.75rem;
+  color: #71717a;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background-color: #27272a;
+  margin: 0.25rem 0;
+}
+
+.dropdownButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: none;
+  border: none;
+  color: #ef4444;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  text-align: left;
+}
+
+.dropdownButton:hover {
+  background-color: #27272a;
 }
