@@ -1,34 +1,12 @@
 import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { Target, Users, Zap, Award } from 'lucide-react';
 import styles from './About.module.css';
+import values from '../../config/about.json';
 
 export default function About() {
     const heroReveal = useScrollReveal<HTMLElement>({ threshold: 0.2 });
     const missionReveal = useScrollReveal<HTMLElement>({ threshold: 0.2 });
     const valuesReveal = useScrollReveal<HTMLElement>({ threshold: 0.1 });
-
-    const values = [
-        {
-            icon: Target,
-            title: 'Enfoque en Resultados',
-            description: 'Nos comprometemos con el crecimiento real de tu negocio, no solo con métricas vanidosas.'
-        },
-        {
-            icon: Users,
-            title: 'Experiencia Especializada',
-            description: 'Equipo experto en marketing digital para el sector gastronómico con años de experiencia.'
-        },
-        {
-            icon: Zap,
-            title: 'Innovación Constante',
-            description: 'Utilizamos las últimas tendencias y tecnologías para mantener tu negocio a la vanguardia.'
-        },
-        {
-            icon: Award,
-            title: 'Compromiso Total',
-            description: 'Tu éxito es nuestro éxito. Trabajamos como parte de tu equipo para lograr tus objetivos.'
-        }
-    ];
 
     return (
         <main className="container">
@@ -69,7 +47,6 @@ export default function About() {
                 <h2 className={styles.sectionTitle}>¿Por Qué Elegirnos?</h2>
                 <div className={styles.valuesGrid}>
                     {values.map((value, index) => {
-                        const Icon = value.icon;
                         return (
                             <div
                                 key={index}
@@ -77,7 +54,20 @@ export default function About() {
                                 style={{ transitionDelay: `${index * 0.1}s` }}
                             >
                                 <div className={styles.iconWrapper}>
-                                    <Icon size={32} className={styles.icon} />
+                                    {(() => {
+                                        switch (value.icon) {
+                                            case 'Target':
+                                                return <Target size={32} className={styles.icon} />;
+                                            case 'Users':
+                                                return <Users size={32} className={styles.icon} />;
+                                            case 'Zap':
+                                                return <Zap size={32} className={styles.icon} />;
+                                            case 'Award':
+                                                return <Award size={32} className={styles.icon} />;
+                                            default:
+                                                return null;
+                                        }
+                                    })()}
                                 </div>
                                 <h3 className={styles.valueTitle}>{value.title}</h3>
                                 <p className={styles.valueDescription}>{value.description}</p>

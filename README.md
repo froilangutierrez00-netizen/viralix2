@@ -1,15 +1,98 @@
-# React + TypeScript + Vite
+# Viralix - Marketing Gastronómico
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma web moderna para servicios de marketing digital especializado en restaurantes, desarrollada con React, TypeScript, Vite y TailwindCSS.
 
-Currently, two official plugins are available:
+## Cómo correr el proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisitos
 
-## React Compiler
+Asegúrate de tener instalado:
+- **Node.js** (versión 18 o superior) - [Descargar aquí](https://nodejs.org/)
+- **npm** (incluido con Node.js)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Instalación
+
+1. **Clona el repositorio** (o descarga el código fuente)
+   ```bash
+   git clone <url-del-repositorio>
+   cd viralix2
+   ```
+
+2. **Instala las dependencias**
+   ```bash
+   npm install
+   ```
+
+### Comandos disponibles
+
+```bash
+# Iniciar servidor de desarrollo (con hot reload)
+npm run dev
+
+# Compilar para producción
+npm run build
+
+# Previsualizar build de producción localmente
+npm run preview
+
+# Ejecutar linter (verificar código)
+npm run lint
+```
+
+### Uso en desarrollo
+
+1. **Inicia el servidor de desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+2. **Abre tu navegador en:** `http://localhost:5173`
+
+3. **Modo Hot Reload:** Los cambios que hagas en el código se reflejarán automáticamente en el navegador sin necesidad de recargar la página.
+
+### Build de producción
+
+Para crear una versión optimizada para producción:
+
+```bash
+npm run build
+```
+
+Los archivos optimizados se generarán en la carpeta `dist/` listos para ser desplegados.
+
+Para probar el build de producción localmente:
+
+```bash
+npm run preview
+```
+
+## 🛠️ Stack Tecnológico
+
+- **React 19** - Librería de UI
+- **TypeScript** - Tipado estático
+- **Vite** - Build tool y dev server
+- **TailwindCSS 4** - Framework de CSS utility-first
+- **Lucide React** - Librería de iconos
+- **React Router DOM** - Enrutamiento
+- **ConfigCat** - Feature flags
+- **Axios** - Cliente HTTP
+
+## 📁 Estructura del proyecto
+
+```
+viralix2/
+├── src/
+│   ├── components/      # Componentes reutilizables
+│   ├── pages/          # Páginas de la aplicación
+│   ├── config/         # Archivos de configuración JSON
+│   ├── contexts/       # Context providers (Auth, etc.)
+│   ├── hooks/          # Custom React hooks
+│   ├── models/         # Tipos e interfaces TypeScript
+│   └── App.tsx         # Componente raíz
+├── public/             # Archivos estáticos
+└── index.html         # HTML principal
+
+```
 
 ## Expanding the ESLint configuration
 
@@ -43,31 +126,4 @@ export default defineConfig([
 ])
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```

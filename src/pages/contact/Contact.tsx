@@ -19,8 +19,8 @@ export default function Contact() {
         e.preventDefault();
 
         //enviar datos de formulario por whatsapp
-        const whatsappUrl = `https://wa.me/5213312556655?text=Nombre: ${formData.name}%0AEmail: ${formData.email}%0ATeléfono: ${formData.phone}%0AMensaje: ${formData.message}`;
-        window.open(whatsappUrl, '_blank');
+        //const whatsappUrl = `https://wa.me/5213312556655?text=Nombre: ${formData.name}%0AEmail: ${formData.email}%0ATeléfono: ${formData.phone}%0AMensaje: ${formData.message}`;
+        //window.open(whatsappUrl, '_blank');
 
         setFormData({ name: '', email: '', phone: '', message: '' });
     };

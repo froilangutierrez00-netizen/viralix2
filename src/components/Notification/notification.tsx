@@ -21,7 +21,7 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
     const n: Notification = { id, message, type };
     setNotes((s) => [n, ...s]);
 
-    // Hide then remove to allow slideOut animation
+
     setTimeout(() => {
       setNotes((s) => s.map(x => (x.id === id ? { ...x, hiding: true } : x)));
       setTimeout(() => setNotes((s) => s.filter(x => x.id !== id)), 300);
