@@ -2,6 +2,7 @@ import { useScrollReveal } from '../../hooks/useScrollReveal';
 import { Mail, Phone, MapPin, Send, X, Instagram, Facebook } from 'lucide-react';
 import { useState } from 'react';
 import styles from './Contact.module.css';
+import env from '../../config/enviroments/env';
 
 export default function Contact() {
     const heroReveal = useScrollReveal<HTMLElement>({ threshold: 0.2 });
@@ -18,9 +19,10 @@ export default function Contact() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
 
-        //enviar datos de formulario por whatsapp
-        //const whatsappUrl = `https://wa.me/5213312556655?text=Nombre: ${formData.name}%0AEmail: ${formData.email}%0ATeléfono: ${formData.phone}%0AMensaje: ${formData.message}`;
-        //window.open(whatsappUrl, '_blank');
+        const message = `Hola, ${formData.message}. Mis datos son:\nNombre: ${formData.name}\nEmail: ${formData.email}\nTeléfono: ${formData.phone}`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${env.contactWhatsapp}?text=${encodedMessage}`;
+        window.open(whatsappUrl, '_blank');
 
         setFormData({ name: '', email: '', phone: '', message: '' });
     };
@@ -122,8 +124,8 @@ export default function Contact() {
                             </div>
                             <div className={styles.infoContent}>
                                 <h3 className={styles.infoTitle}>Email</h3>
-                                <a href="mailto:info@viralix.com" className={styles.infoLink}>
-                                    info@viralix.com
+                                <a href={`mailto:${env.contactEmail}`} className={styles.infoLink}>
+                                    {env.contactEmail}
                                 </a>
                             </div>
                         </div>
@@ -134,8 +136,8 @@ export default function Contact() {
                             </div>
                             <div className={styles.infoContent}>
                                 <h3 className={styles.infoTitle}>Teléfono</h3>
-                                <a href="tel:+573001234567" className={styles.infoLink}>
-                                    +57 300 123 4567
+                                <a href={`tel:${env.contactPhone}`} className={styles.infoLink}>
+                                    {env.contactPhone}
                                 </a>
                             </div>
                         </div>
@@ -147,7 +149,7 @@ export default function Contact() {
                             <div className={styles.infoContent}>
                                 <h3 className={styles.infoTitle}>Ubicación</h3>
                                 <p className={styles.infoText}>
-                                    Barranquilla, Colombia
+                                    {env.address}
                                 </p>
                             </div>
                         </div>
@@ -163,7 +165,7 @@ export default function Contact() {
                         <h3 className={styles.hoursTitle}>Síguenos en Redes</h3>
                         <div className={styles.socialIcons}>
                             <a
-                                href="https://twitter.com/viralix"
+                                href={env.socialTwitter}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
@@ -172,7 +174,7 @@ export default function Contact() {
                                 <span>@viralix</span>
                             </a>
                             <a
-                                href="https://instagram.com/viralix"
+                                href={env.socialInstagram}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}
@@ -181,7 +183,7 @@ export default function Contact() {
                                 <span>@viralix</span>
                             </a>
                             <a
-                                href="https://facebook.com/viralix"
+                                href={env.socialFacebook}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className={styles.socialLink}

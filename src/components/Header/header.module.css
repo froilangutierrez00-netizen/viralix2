@@ -45,13 +45,13 @@
 
 .navLink {
   font-size: 0.875rem;
-  color: #9ca3af;
+  color: white;
   transition: color 0.15s;
   text-decoration: none;
 }
 
 .navLink:hover {
-  color: white;
+  color: gray;
 }
 
 .authButton {
@@ -60,7 +60,7 @@
   gap: 0.5rem;
   background-color: #18181b;
   border: 1px solid #27272a;
-  color: #9ca3af;
+  color: white;
   padding: 0.375rem 0.75rem;
   border-radius: 9999px;
   font-size: 0.875rem;

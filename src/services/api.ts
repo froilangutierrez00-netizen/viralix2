@@ -1,7 +1,8 @@
 import axios from 'axios';
+import env from '../config/enviroments/env';
 
 const api = axios.create({
-  baseURL: '/api', // proxy en vite.config.ts -> backend .NET
+  baseURL: env.apiUrl, // backend .NET
   headers: { 'Content-Type': 'application/json' }
 });
 

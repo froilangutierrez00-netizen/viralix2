@@ -5,6 +5,7 @@ import { useNotification } from '../Notification/notification';
 import styles from './ComboCard.module.css';
 import { useFeatureFlag } from "configcat-react";
 import combosConfig from '../../config/combos.json';
+import env from '../../config/enviroments/env';
 
 type Props = {
   combo: Combo;
@@ -19,8 +20,8 @@ export default function ComboCard({ combo }: Props) {
   async function onBuy() {
     if (ff_subscriptionpaymentenabledValue.value === false) {
       setLoading(true);
-      const message = `Hola, quiero comprar el plan "${combo.title}" (id: ${combo.id}) - Precio: ${combo.price}`;
-      window.open(`https://wa.me/${123}?text=${encodeURIComponent(message)}`, '_blank');
+      const message = `Hola, estoy interesado en el plan ${combo.title}`;
+      window.open(`https://wa.me/${env.contactWhatsapp}?text=${encodeURIComponent(message)}`, '_blank');
       setLoading(false);
       return;
     }

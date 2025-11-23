@@ -8,6 +8,7 @@ import Header from './components/Header/header';
 import Footer from './components/Footer/footer';
 import { ConfigCatProvider, createConsoleLogger, LogLevel } from "configcat-react";
 import { AuthProvider } from './contexts/AuthContext';
+import env from './config/enviroments/env';
 
 function App() {
 
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <>
-      <ConfigCatProviderTyped sdkKey="configcat-sdk-1/mSTeCCvt40uNNpsx3167WA/garm33QKqEqZCGSRYfvbeA" options={{ logger }}>
+      <ConfigCatProviderTyped sdkKey={env.configcatKey} options={{ logger }}>
         <AuthProvider>
           <Header />
           <Routes>
