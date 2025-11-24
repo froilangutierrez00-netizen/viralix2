@@ -4,7 +4,7 @@ export type Combo = {
   price: string;
   priceId?: string;
   keyFeatures: number[];
-  additionalFee?: string;
+  additionalFee?: string | null;
   badge?: string | null;
 };
 
