@@ -1,0 +1,22 @@
+.footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: #52525b;
+    font-size: 0.875rem;
+    text-align: center;
+}

@@ -1,0 +1,54 @@
+{
+  "allFeatures": [
+    "Seguimiento diario",
+    "Promos del día",
+    "Asesoría mensual",
+    "Estrategia digital",
+    "Campañas Ads",
+    "Menu digital"
+  ],
+  "combos": [
+    {
+      "id": "basic",
+      "title": "Basic",
+      "price": "$200.000",
+      "keyFeatures": [
+        0,
+        1,
+        2
+      ],
+      "priceId": "price_1-stripe",
+      "badge": null
+    },
+    {
+      "id": "standard",
+      "title": "Standard",
+      "price": "$300.000",
+      "keyFeatures": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "priceId": "price_2-stripe",
+      "badge": "MÁS VENDIDO"
+    },
+    {
+      "id": "premium",
+      "title": "Premium",
+      "price": "$700.000",
+      "additionalFee": null,
+      "keyFeatures": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "priceId": "price_3-stripe",
+      "badge": null
+    }
+  ]
+}

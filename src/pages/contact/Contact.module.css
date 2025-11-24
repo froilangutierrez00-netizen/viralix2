@@ -1,0 +1,269 @@
+.hero {
+    text-align: center;
+    padding: 6rem 0 3rem 0;
+    margin-top: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.title {
+    color: var(--blanco);
+    margin: 0;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--azul) 0%, #0088cc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtitle {
+    color: #ccc;
+    margin-top: 1rem;
+    font-size: 1.25rem;
+}
+
+.contentWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formSection,
+.infoSection {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.formSection.visible,
+.infoSection.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.sectionTitle {
+    color: white;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.form {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.label {
+    display: block;
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 0.875rem;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--azul);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitButton {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--azul) 0%, #0088cc 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 170, 255, 0.3);
+}
+
+.infoCard {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    margin-bottom: 1rem;
+}
+
+.infoItem {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.infoItem:last-child {
+    margin-bottom: 0;
+}
+
+.iconWrapper {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--azul) 0%, #0088cc 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: white;
+}
+
+.infoContent {
+    flex: 1;
+}
+
+.infoTitle {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.infoLink {
+    color: var(--azul);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.infoLink:hover {
+    color: #0088cc;
+    text-decoration: underline;
+}
+
+.infoText {
+    color: #ccc;
+    font-size: 1rem;
+    margin: 0;
+}
+
+.workingHours {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.socialLinks {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.socialIcons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.socialLink {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.socialLink:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--azul);
+    color: var(--azul);
+    transform: translateX(5px);
+}
+
+.socialLink span {
+    font-size: 0.95rem;
+}
+
+.hoursTitle {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hoursText {
+    color: #ccc;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 968px) {
+    .contentWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .form,
+    .infoCard {
+        padding: 1.5rem;
+    }
+}
