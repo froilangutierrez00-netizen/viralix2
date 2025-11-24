@@ -3,18 +3,18 @@
         "id": 1,
         "name": "María González",
         "text": "Viralix transformó completamente la presencia digital de mi restaurante. Las ventas aumentaron un 30% en el primer mes gracias a sus estrategias de redes sociales.",
-        "avatar": null
+        "avatar": "/testimonial-1.jpg"
     },
     {
         "id": 2,
         "name": "Carlos Rodríguez",
         "text": "El sistema de gestión de pedidos es increíblemente intuitivo. Ahora podemos manejar el doble de órdenes sin errores. ¡Totalmente recomendado!",
-        "avatar": null
+        "avatar": "/testimonial-2.jpg"
     },
     {
         "id": 3,
         "name": "Ana Martínez",
         "text": "La asesoría personalizada fue clave para entender a nuestros clientes. El equipo de Viralix es profesional, atento y realmente sabe del sector gastronómico.",
-        "avatar": null
+        "avatar": "/testimonial-3.jpg"
     }
 ]

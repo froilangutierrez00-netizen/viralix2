@@ -5,8 +5,7 @@
     "Asesoría mensual",
     "Estrategia digital",
     "Campañas Ads",
-    "Menu digital",
-    "Automatización de pedidos en línea"
+    "Menu digital"
   ],
   "combos": [
     {
@@ -38,16 +37,15 @@
     {
       "id": "premium",
       "title": "Premium",
-      "price": "$1.700.000",
-      "additionalFee": "$300.000",
+      "price": "$700.000",
+      "additionalFee": null,
       "keyFeatures": [
         0,
         1,
         2,
         3,
         4,
-        5,
-        6
+        5
       ],
       "priceId": "price_3-stripe",
       "badge": null
